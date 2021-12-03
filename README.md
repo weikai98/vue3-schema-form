@@ -1,29 +1,13 @@
-# vue3-test
+## uiSchema 功能集成
 
-## Project setup
-```
-npm install
-```
+### 自定义组件
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+1. PasswordWidget
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 自定义组件样式
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## 集成 AJV Schema Form 中的 addFormat 与 addKeyword
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 自定义 format 的自定义组件渲染
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 自定义校验
