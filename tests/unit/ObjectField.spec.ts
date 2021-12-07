@@ -1,15 +1,11 @@
 import { mount } from '@vue/test-utils'
-import SchemaForm, {
-  // ObjectField,
-  // ArrayField,
-  StringField,
-  NumberField,
-} from '../../lib'
+import { StringField, NumberField } from '../../lib'
+import TestComponent from './utils/TestComponent'
 
 describe('ObjectField.vue', () => {
   it('should render correct number field and string field', async () => {
     let value = { name: '', age: 0 }
-    const wrapper = mount(SchemaForm, {
+    const wrapper = mount(TestComponent, {
       props: {
         schema: {
           type: 'object',
@@ -37,7 +33,7 @@ describe('ObjectField.vue', () => {
 
   it('should render correct value', async () => {
     let value = { name: '', age: 0 }
-    const wrapper = mount(SchemaForm, {
+    const wrapper = mount(TestComponent, {
       props: {
         schema: {
           type: 'object',

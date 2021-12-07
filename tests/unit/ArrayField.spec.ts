@@ -1,15 +1,11 @@
 import { mount } from '@vue/test-utils'
+import TestComponent from './utils/TestComponent'
 
-import SchemaForm, {
-  // ObjectField,
-  ArrayField,
-  StringField,
-  NumberField,
-} from '../../lib'
+import { ArrayField, StringField, NumberField } from '../../lib'
 
 describe('ArrayFiled', () => {
   it('should render multi type', () => {
-    const wrapper = mount(SchemaForm, {
+    const wrapper = mount(TestComponent, {
       props: {
         schema: {
           type: 'array',
@@ -36,7 +32,7 @@ describe('ArrayFiled', () => {
   })
 
   it('should render single type', () => {
-    const wrapper = mount(SchemaForm, {
+    const wrapper = mount(TestComponent, {
       props: {
         schema: {
           type: 'array',

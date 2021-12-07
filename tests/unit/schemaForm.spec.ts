@@ -1,15 +1,12 @@
 import { mount } from '@vue/test-utils'
-import SchemaForm, {
-  // ObjectField,
-  // ArrayField,
-  // StringField,
-  NumberField,
-} from '../../lib'
+import TestComponent from './utils/TestComponent'
+
+import { NumberField } from '../../lib'
 
 describe('SchemaForm.vue', () => {
   it('should render correct number field', async () => {
     let value
-    const wrapper = mount(SchemaForm, {
+    const wrapper = mount(TestComponent, {
       props: {
         schema: {
           type: 'number',
@@ -28,6 +25,6 @@ describe('SchemaForm.vue', () => {
     input.element.value = '123'
 
     input.trigger('input')
-    expect(value).toEqual('123')
+    expect(value).toEqual(123)
   })
 })
